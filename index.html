@@ -1,42 +1,108 @@
-<!-- About Me Section -->
-<section id="about" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="mb-4">About Me</h2>
-    <p class="lead">
-      Experienced Senior Software Engineer with 6+ years of expertise in scalable, data-driven systems with a strong focus on backend development, cloud integration, automation, and cybersecurity. Passionate about clean engineering, mentoring, and delivering reliable solutions in fast-paced environments.
-    </p>
-    
-    <!-- Experience Timeline -->
-    <h3 class="mt-5">Experience</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devika Arun | Experience Timeline</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f9f9f9;
+    }
 
-    <div class="card mb-4">
-      <div class="card-body">
-        <h5 class="card-title">Senior Software Developer – Linkshadow</h5>
-        <h6 class="card-subtitle text-muted">Feb 2023 – Jan 2024 | Dubai, UAE</h6>
-        <ul class="mt-2">
-          <li>Led backend development using Python & Go with advanced concurrency.</li>
-          <li>Built CI/CD pipelines with GitLab, Ansible, and YAML automation.</li>
-          <li>Managed multi-cloud infrastructure (Azure, AWS, GCP).</li>
-          <li>Integrated Azure Blob Storage + Databricks for ETL jobs.</li>
-          <li>Enhanced internal SIEM system with open-source tools.</li>
-          <li>Worked on embedded Linux for system monitoring and diagnostics.</li>
+    .timeline {
+      position: relative;
+      margin-left: 30px;
+      border-left: 3px solid #888;
+      padding-left: 20px;
+    }
+
+    .timeline-entry {
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .timeline-marker {
+      width: 12px;
+      height: 12px;
+      border: 2px solid black;
+      background-color: white;
+      border-radius: 50%;
+      position: absolute;
+      left: -29px;
+      top: 6px;
+    }
+
+    .timeline-entry.promoted .timeline-marker {
+      border-color: #f5b301;
+    }
+
+    .timeline-content {
+      padding-left: 10px;
+    }
+
+    .timeline-content h4 {
+      margin-bottom: 0;
+      font-weight: bold;
+    }
+
+    .timeline-content h6 {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .timeline-content p {
+      font-style: italic;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Work Experience</h2>
+
+  <div class="timeline">
+    <div class="timeline-entry promoted">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <h4>Senior Software Developer</h4>
+        <h6>Linkshadow — Dubai</h6>
+        <p>Feb 2023 – Jan 2024</p>
+        <ul>
+          <li>Led backend architecture using Python and Go with concurrency techniques.</li>
+          <li>Developed CI/CD pipelines in GitLab using YAML templates.</li>
+          <li>Managed cloud deployments in Azure, AWS, and GCP.</li>
+          <li>Improved SIEM detection with custom tools and automation.</li>
         </ul>
       </div>
     </div>
 
-    <div class="card mb-4">
-      <div class="card-body">
-        <h5 class="card-title">Software Developer – Linkshadow</h5>
-        <h6 class="card-subtitle text-muted">Nov 2020 – Jan 2023 | Dubai, UAE</h6>
-        <ul class="mt-2">
-          <li>Created microservices in Go for real-time log parsing and analysis.</li>
-          <li>Led modular Python/Django app development and automation with Pytest.</li>
-          <li>Integrated security tools (SIEM, Firewalls) via REST APIs.</li>
-          <li>Worked with virtualization, KVM, TCP/IP, VPNs, and networking protocols.</li>
+    <div class="timeline-entry">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <h4>Software Developer</h4>
+        <h6>Linkshadow — Dubai</h6>
+        <p>Nov 2020 – Jan 2023</p>
+        <ul>
+          <li>Created scalable backend services using Go and Python.</li>
+          <li>Integrated SIEM/NAC tools via REST APIs.</li>
+          <li>Built dashboards and automated testing with Pytest.</li>
+          <li>Maintained legacy scripts for resource monitoring.</li>
         </ul>
       </div>
     </div>
-
+  </div>
     <div class="card mb-4">
       <div class="card-body">
         <h5 class="card-title">Web Developer – Nintriva Technology Solutions</h5>
