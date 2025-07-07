@@ -8,8 +8,59 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 20px;
       background: #f9f9f9;
+      display: flex;
+    }
+
+    .sidenav {
+      width: 250px;
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+      height: 100vh;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sidenav img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .sidenav h1 {
+      font-size: 20px;
+      margin: 10px 0 5px;
+      text-align: center;
+    }
+
+    .sidenav p {
+      font-size: 14px;
+      text-align: center;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .sidenav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 5px 0;
+      display: inline-block;
+    }
+
+    .sidenav .nav-links {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 20px;
     }
 
     .timeline {
@@ -66,53 +117,114 @@
     li {
       margin-bottom: 5px;
     }
+
+    section {
+      margin-top: 60px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+    }
   </style>
 </head>
 <body>
-
-  <h2>Work Experience</h2>
-
-  <div class="timeline">
-    <div class="timeline-entry promoted">
-      <div class="timeline-marker"></div>
-      <div class="timeline-content">
-        <h4>Senior Software Developer</h4>
-        <h6>Linkshadow — Dubai</h6>
-        <p>Feb 2023 – Jan 2024</p>
-        <ul>
-          <li>Led backend architecture using Python and Go with concurrency techniques.</li>
-          <li>Developed CI/CD pipelines in GitLab using YAML templates.</li>
-          <li>Managed cloud deployments in Azure, AWS, and GCP.</li>
-          <li>Improved SIEM detection with custom tools and automation.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="timeline-entry">
-      <div class="timeline-marker"></div>
-      <div class="timeline-content">
-        <h4>Software Developer</h4>
-        <h6>Linkshadow — Dubai</h6>
-        <p>Nov 2020 – Jan 2023</p>
-        <ul>
-          <li>Created scalable backend services using Go and Python.</li>
-          <li>Integrated SIEM/NAC tools via REST APIs.</li>
-          <li>Built dashboards and automated testing with Pytest.</li>
-          <li>Maintained legacy scripts for resource monitoring.</li>
-        </ul>
-      </div>
+  <div class="sidenav">
+    <img src="images/prof3.jpeg" alt="Devika Arun">
+    <h1>Devika Arun</h1>
+    <p>Senior Software Developer<br>
+       Eindhoven, Netherlands<br>
+       <a href="mailto:devika_aj@outlook.com">devika_aj@outlook.com</a><br>
+       +31-686306039</p>
+    <div class="nav-links">
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#events">Team Events</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.linkedin.com/in/devika-arun-bbb9bb181/" target="_blank">LinkedIn</a>
+      <a href="images/DevikaResumeNetherlands.pdf" download>Download CV</a>
     </div>
   </div>
-    <div class="card mb-4">
-      <div class="card-body">
-        <h5 class="card-title">Web Developer – Nintriva Technology Solutions</h5>
-        <h6 class="card-subtitle text-muted">Jun 2017 – Nov 2019 | Kochi, India</h6>
-        <ul class="mt-2">
-          <li>Built responsive UIs using HTML, CSS, JS, Bootstrap, and jQuery.</li>
-          <li>Led a 10-member team that increased company revenue by 200%.</li>
-          <li>Maintained backend logic in Node.js & Python; applied secure coding practices.</li>
-        </ul>
+
+  <div class="main-content">
+    <section id="experience">
+      <h2>Professional Experience</h2>
+
+      <!-- Linkshadow Experience -->
+      <div class="timeline">
+        <div class="timeline-entry promoted">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h4>Senior Software Developer</h4>
+            <h6>Linkshadow — Dubai</h6>
+            <p>Feb 2023 – Jan 2024</p>
+            <ul>
+              <li>Led backend architecture using Python and Go with concurrency techniques.</li>
+              <li>Developed CI/CD pipelines in GitLab using YAML templates.</li>
+              <li>Managed cloud deployments in Azure, AWS, and GCP.</li>
+              <li>Improved SIEM detection with custom tools and automation.</li>
+              <li>Embedded Linux profiling and system monitoring in C and Go.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-entry">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h4>Software Developer</h4>
+            <h6>Linkshadow — Dubai</h6>
+            <p>Nov 2020 – Jan 2023</p>
+            <ul>
+              <li>Created scalable backend services using Go and Python.</li>
+              <li>Integrated SIEM/NAC tools via REST APIs.</li>
+              <li>Built dashboards and automated testing with Pytest.</li>
+              <li>Maintained legacy scripts for resource monitoring.</li>
+              <li>Worked with networking, virtualization (KVM/VMware), TCP/IP, VPNs.</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
+
+      <!-- Nintriva -->
+      <div class="timeline">
+        <div class="timeline-entry">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h4>Web Developer</h4>
+            <h6>Nintriva Technology Solutions — Kochi, India</h6>
+            <p>Jun 2017 – Nov 2019</p>
+            <ul>
+              <li>Built responsive websites using HTML, CSS, JavaScript, Bootstrap, and jQuery.</li>
+              <li>Developed backend logic using Node.js and Python.</li>
+              <li>Led 10-member team; contributed 20% of company revenue.</li>
+              <li>Implemented CI/CD pipelines and version control with Git.</li>
+              <li>Applied basic SEO for improved visibility.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bytmates -->
+      <div class="timeline">
+        <div class="timeline-entry">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h4>Intern</h4>
+            <h6>Bytmates — India</h6>
+            <p>May 2014 – Mar 2015</p>
+            <ul>
+              <li>Worked on digital watermarking for secure content distribution.</li>
+              <li>Designed and implemented data governance processes.</li>
+              <li>Handled low-level diagnostics and reusable backend code.</li>
+              <li>Participated in user-facing design integrated with server logic.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
-</section>
+</body>
+</html>
