@@ -165,6 +165,22 @@
       margin-bottom: 40px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
+    
+    .scroll-gallery {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 20px;
+        padding-bottom: 10px;
+    }
+
+    .scroll-gallery img {
+        height: 180px;
+        flex: 0 0 auto;
+        border-radius: 8px;
+        scroll-snap-align: start;
+    }
+
   </style>
 </head>
 <body>
@@ -296,17 +312,34 @@
     </section>
 
     <section id="skills" class="card-section">
-      <h2>Skills</h2>
-      <ul>
-        <li>Python, Go, Node.js, Java, C, C++, Shell Scripting</li>
-        <li>HTML5, CSS3, JavaScript, Bootstrap, AJAX</li>
-        <li>RESTful APIs, Express.js, Git, SVN</li>
-        <li>Azure, AWS, Google Cloud Platform</li>
-        <li>MongoDB, MySQL, SQLite, NoSQL</li>
-        <li>Docker, Ansible, GitLab CI/CD</li>
-        <li>Wireshark, Linux Administration, VPNs, Firewalls</li>
-      </ul>
+    <h2>Skills</h2>
+    <ul>
+        <li>HTML5, CSS3, Bootstrap, and responsive design best practices</li>
+        <li>JavaScript, AJAX for interactive web applications</li>
+        <li>Cloud platforms: Azure, AWS, Google Cloud Platform (GCP)</li>
+        <li>Strong understanding of mobile-first and responsive design approaches</li>
+        <li>Programming languages: Python, Go (Golang), Node.js, C, C++, Java</li>
+        <li>Frameworks: Django for backend web development</li>
+        <li>REST API development and integration</li>
+        <li>Shell scripting for automation and system operations</li>
+        <li>Ansible for configuration management and IT automation</li>
+        <li>Version control tools: Git, SVN</li>
+        <li>Databases: MongoDB, NoSQL, SQLite3, MySQL, Parquet</li>
+        <li>Caching and messaging: Redis, ZeroMQ</li>
+        <li>Basic knowledge of AI and machine learning principles</li>
+        <li>Docker containerization and microservices development</li>
+        <li>Networking fundamentals: DHCP, DNS, IPAM, port scanning, vulnerability scanning</li>
+        <li>Cybersecurity: Familiar with internet protocols and core security principles</li>
+        <li>Linux systems administration: Ubuntu, networking equipment (routers), hardware support</li>
+        <li>System administration: troubleshooting, diagnostics, and issue resolution</li>
+        <li>Business tools: Microsoft Office, reporting, vendor management, invoice handling</li>
+        <li>Data analysis and administrative support</li>
+        <li>Team leadership, mentoring, and collaborative project execution</li>
+        <li>Strong critical thinking, innovation, deadline management, and multitasking</li>
+        <li>Highly organized, enthusiastic, and confident with excellent coordination skills</li>
+    </ul>
     </section>
+
 
     <section id="projects" class="card-section">
       <h2>Projects</h2>
@@ -319,7 +352,7 @@
       </ul>
     </section>
 
-    <section id="certifications" class="card-section">
+    <!-- <section id="certifications" class="card-section">
       <h2>Certifications</h2>
       <ul>
         <li>Demisto Engineer – Palo Alto Networks</li>
@@ -328,18 +361,35 @@
         <li>Hardware & Networking – LBS Institute of Technology</li>
         <li>Exceptional Performance Award – Linkshadow</li>
       </ul>
+    </section> -->
+    <section id="certifications" class="card-section">
+    <h2>Certifications</h2>
+    <div class="scroll-gallery">
+        <img src="images/cert_demisto.jpg" alt="Demisto Certification">
+        <img src="images/cert_xsoar.jpg" alt="XSOAR Certification">
+        <img src="images/cert_roboavr.jpg" alt="ROBOAVR Certificate">
+        <img src="images/cert_hardware.jpg" alt="Hardware Certificate">
+        <img src="images/cert_award.jpg" alt="Exceptional Performance Award">
+    </div>
     </section>
 
-    <section id="events" class="card-section">
+    <!-- <section id="events" class="card-section">
       <h2>Team Events</h2>
       <ul>
         <li>AI Hackathon 2023 – Dubai</li>
         <li>Team Outing – Desert Safari</li>
         <li>Cybersecurity Summit – GITEX 2023</li>
-        <!-- You can add images later -->
       </ul>
-    </section>
+    </section> -->
 
+    <section id="events" class="card-section">
+    <h2>Team Events</h2>
+    <div class="scroll-gallery">
+        <img src="images/event_hackathon.jpg" alt="Iftar party">
+        <img src="images/event_safari.jpg" alt="Paintball">
+        <img src="images/event_gitex.jpg" alt="GITEX Summit">
+    </div>
+    </section>
     <section id="contact" class="card-section">
       <h2>Contact</h2>
       <p>If you’d like to get in touch, feel free to reach out via:</p>
