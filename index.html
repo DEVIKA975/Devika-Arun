@@ -8,13 +8,14 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: #f9f9f9;
+      background: url('images/bg-pattern.jpg') no-repeat center center fixed;
+      background-size: cover;
       display: flex;
     }
 
     .sidenav {
       width: 250px;
-      background-color: #343a40;
+      background-color: rgba(52, 58, 64, 0.95);
       color: white;
       padding: 20px;
       height: 100vh;
@@ -22,6 +23,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
     }
 
     .sidenav img {
@@ -29,6 +33,7 @@
       height: 100px;
       border-radius: 50%;
       margin-bottom: 10px;
+      border: 2px solid #fff;
     }
 
     .sidenav h1 {
@@ -49,6 +54,11 @@
       text-decoration: none;
       margin: 5px 0;
       display: inline-block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f5b301;
     }
 
     .sidenav .nav-links {
@@ -60,7 +70,8 @@
 
     .main-content {
       flex: 1;
-      padding: 20px;
+      padding: 20px 40px 20px 300px;
+      color: #333;
     }
 
     .timeline {
@@ -92,6 +103,10 @@
 
     .timeline-content {
       padding-left: 10px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .timeline-content h4 {
@@ -126,6 +141,14 @@
       border-bottom: 2px solid #ddd;
       padding-bottom: 10px;
     }
+
+    .card-section {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 40px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body>
@@ -133,7 +156,7 @@
     <img src="images/prof3.jpeg" alt="Devika Arun">
     <h1>Devika Arun</h1>
     <p>Senior Software Developer<br>
-       Veldhoven, Netherlands<br>
+       Eindhoven, Netherlands<br>
        <a href="mailto:devika_aj@outlook.com">devika_aj@outlook.com</a><br>
        +31-686306039</p>
     <div class="nav-links">
@@ -247,6 +270,67 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section id="education" class="card-section">
+      <h2>Education</h2>
+      <p><strong>Bachelor of Technology in Computer Science</strong><br>LBS Institute of Technology for Women, Trivandrum, Kerala (2010–2014)</p>
+      <p><strong>Higher Secondary</strong><br>Cotton Hill GHSS, Trivandrum, Kerala (2008–2010)</p>
+    </section>
+
+    <section id="skills" class="card-section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Python, Go, Node.js, Java, C, C++, Shell Scripting</li>
+        <li>HTML5, CSS3, JavaScript, Bootstrap, AJAX</li>
+        <li>RESTful APIs, Express.js, Git, SVN</li>
+        <li>Azure, AWS, Google Cloud Platform</li>
+        <li>MongoDB, MySQL, SQLite, NoSQL</li>
+        <li>Docker, Ansible, GitLab CI/CD</li>
+        <li>Wireshark, Linux Administration, VPNs, Firewalls</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="card-section">
+      <h2>Projects</h2>
+      <ul>
+        <li>Student Management System (Mini Project)</li>
+        <li>Human-Computer Interfaces in Robotic Surgery (Seminar)</li>
+        <li>Robust Watermarking of Encrypted JPEG2000 Images</li>
+        <li>Personal Portfolio Website & E-Commerce Cart</li>
+        <li>Open-source contributions on GitHub</li>
+      </ul>
+    </section>
+
+    <section id="certifications" class="card-section">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Demisto Engineer – Palo Alto Networks</li>
+        <li>Cortex XSOAR Analyst – Palo Alto Networks</li>
+        <li>ROBOAVR Workshop – Microsoft Robotics Dev Studio</li>
+        <li>Hardware & Networking – LBS Institute of Technology</li>
+        <li>Exceptional Performance Award – Linkshadow</li>
+      </ul>
+    </section>
+
+    <section id="events" class="card-section">
+      <h2>Team Events</h2>
+      <ul>
+        <li>AI Hackathon 2023 – Dubai</li>
+        <li>Team Outing – Desert Safari</li>
+        <li>Cybersecurity Summit – GITEX 2023</li>
+        <!-- You can add images later -->
+      </ul>
+    </section>
+
+    <section id="contact" class="card-section">
+      <h2>Contact</h2>
+      <p>If you’d like to get in touch, feel free to reach out via:</p>
+      <ul>
+        <li>Email: <a href="mailto:devika_aj@outlook.com">devika_aj@outlook.com</a></li>
+        <li>Phone: +31-686306039</li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/devika-arun-bbb9bb181/" target="_blank">linkedin.com/in/devika-arun</a></li>
+      </ul>
     </section>
   </div>
 </body>
