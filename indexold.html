@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devika Arun | Experience Timeline</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #f0f0f0 30%, #dce8ef);
+      display: flex;
+    }
+
+    .sidenav {
+      width: 250px;
+      background: linear-gradient(135deg, #343a40, #495057);
+      color: white;
+      padding: 20px;
+      height: 100vh;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .sidenav img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      border: 2px solid #fff;
+    }
+
+    .sidenav h1 {
+      font-size: 20px;
+      margin: 10px 0 5px;
+      text-align: center;
+    }
+
+    .sidenav p {
+      font-size: 14px;
+      text-align: center;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .sidenav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 5px 0;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f5b301;
+    }
+
+    .sidenav .nav-links {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sidenav .btn {
+      display: inline-block;
+      background: #f5b301;
+      color: #000;
+      font-weight: bold;
+      padding: 10px 16px;
+      margin-top: 10px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .sidenav .btn:hover {
+      background: #ffc107;
+      color: #222;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 20px 40px 20px 300px;
+      color: #333;
+    }
+
+    .timeline {
+      position: relative;
+      margin-left: 30px;
+      border-left: 3px solid #888;
+      padding-left: 20px;
+    }
+
+    .timeline-entry {
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .timeline-marker {
+      width: 12px;
+      height: 12px;
+      border: 2px solid black;
+      background-color: white;
+      border-radius: 50%;
+      position: absolute;
+      left: -29px;
+      top: 6px;
+    }
+
+    .timeline-entry.promoted .timeline-marker {
+      border-color: #f5b301;
+    }
+
+    .timeline-content {
+      padding-left: 10px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .timeline-content h4 {
+      margin-bottom: 0;
+      font-weight: bold;
+    }
+
+    .timeline-content h6 {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .timeline-content p {
+      font-style: italic;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    section {
+      margin-top: 60px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+    }
+
+    .card-section {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 40px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+  .scroll-gallery-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  .scroll-gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+  }
+  .scroll-gallery img {
+    height: 180px;
+    flex: 0 0 auto;
+    border-radius: 8px;
+    scroll-snap-align: start;
+  }
+  .scroll-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .scroll-arrow.left { left: 0; }
+  .scroll-arrow.right { right: 0; }
+
+  </style>
+</head>
+<body>
+  <div class="sidenav">
+    <img src="images/prof3.jpeg" alt="Devika Arun">
+    <h1>Devika Arun</h1>
+    <p>Senior Software Developer<br>
+       Veldhoven, Netherlands<br>
+       <a href="mailto:devika_aj@outlook.com">devika_aj@outlook.com</a><br>
+       +31-686306039</p>
+    <div class="nav-links">
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#events">Team Events</a>
+      <a href="#contact">Contact</a>
+    </div>  
+    <a class="btn" href="https://www.linkedin.com/in/devika-arun-bbb9bb181/" target="_blank">LinkedIn</a>
+    <a class="btn" href="images/DevikaArunCV.pdf" download>Download CV</a>
+    
+  </div>
+
+  <div class="main-content">
+    <section id="experience">
+      <h2>Professional Experience</h2>
+
+      <!-- Linkshadow Experience -->
+      <div class="timeline">
+        <div class="timeline-entry promoted">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h4>Senior Software Developer</h4>
+            <h6>Linkshadow — Dubai</h6>
+            <p>Feb 2023 – Jan 2024</p>
+           <ul>
+            <li>Led technical design and implementation of large-scale backend systems in Python and Go using advanced concurrency and performance optimization techniques.</li>
+            <li>Architected and maintained CI/CD pipelines in GitLab DevOps with YAML-based templates, standardizing deployments across dev, test, and production environments.</li>
+            <li>Automated system provisioning and configuration using Ansible, increasing deployment consistency and reducing manual intervention.</li>
+            <li>Managed cloud infrastructure across Azure, AWS, and GCP, supporting scalable deployment, monitoring, and disaster recovery.</li>
+            <li>Developed custom ETL job pipelines integrating Azure Blob Storage and Databricks, automating data validation, job scheduling, and deployment via Python.</li>
+            <li>Configured network security (routers, firewalls, VPNs, IPsec) and enforced secure Linux system practices.</li>
+            <li>Utilized Wireshark for advanced network traffic analysis, diagnostics, and troubleshooting in both production and development environments.</li>
+            <li>Enhanced an internal custom SIEM system using open-source tools, boosting threat detection and real-time analysis.</li>
+            <li>Mentored junior developers, participated in code design reviews, and contributed to cross-team collaboration and knowledge sharing.</li>
+            <li>Engaged in AI/ML experimentation and integrated simple AI models into automation workflows and existing systems.</li>
+            <li>Worked with embedded Linux, creating monitoring tools and diagnostics in C and Go, and performing low-level system profiling and debugging.</li>
+        </ul>
+
+          </div>
+        </div>
+
+        <div class="timeline-entry">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h4>Software Developer</h4>
+            <h6>Linkshadow — Dubai</h6>
+            <p>Nov 2020 – Jan 2023</p>
+            <ul>
+                <li>Designed and implemented scalable backend services in Go,
+                    focusing on high-performance data processing using
+                    goroutines and channels</li>
+                <li>Led development of modular and testable Python/Django applications, improving system flexibility and maintainability.</li>
+                <li>Built microservices for real-time log parsing and event correlation, enhancing security monitoring speed and accuracy.</li>
+                <li>Developed dashboards and monitoring tools for both operational and security analysis.</li>
+                <li>Automated testing and validation using Pytest, reducing bugs and increasing code quality.</li>
+                <li>Integrated external systems (SIEM, NAC, Firewalls) using REST APIs for smooth interconnectivity.</li>
+                <li>Created shell scripts to automate recurring tasks, system checks, and error detection routines.</li>
+                <li>Implemented deployment pipelines and unit testing within CI/CD using GitLab DevOps.</li>
+                <li>Maintained and debugged legacy Python scripts for SQLite3 data ingestion and system resource analysis.</li>
+                <li>Participated in code reviews, agile sprints, and collaborated across teams to meet product timelines and quality standards.</li>
+                <li>Gained experience in virtualization with KVM/VMware and hands-on work in networking, including TCP/IP, VPNs, MPLS, and subnetting.</li>
+                
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nintriva -->
+      <div class="timeline">
+        <div class="timeline-entry">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h4>Web Developer</h4>
+            <h6>Nintriva Technology Solutions — Kochi, India</h6>
+            <p>Jun 2017 – Nov 2019</p>
+            <ul>
+                <li>Developed responsive web interfaces using HTML, CSS, JavaScript, jQuery, and Bootstrap, enhancing cross-browser user experiences.</li>
+                <li>Implemented and maintained back-end logic using Python and Node.js, with data storage in MongoDB and other NoSQL systems.</li>
+                <li>Practiced secure coding techniques, with attention to session management, data privacy, and application performance.</li>
+                <li>Utilized Git for version control and implemented CI/CD pipelines to support frequent and stable deployments.</li>
+                <li>Conducted unit and integration testing, contributing to software reliability and reduced post-deployment issues.</li>
+                <li>Documented software specifications, including functional and non-functional requirements such as availability, performance, and security standards.</li>
+                <li>Performed regular website audits for content accuracy and system functionality to ensure optimal performance.</li>
+                <li>Led a team of 10 developers, increasing office revenue by 200% within nine months, accounting for 20% of the company’s total revenue.</li>
+                <li>Promoted within one year for outstanding performance and leadership, accelerating my career trajectory.</li>
+                <li>Applied basic SEO principles to improve website visibility and search engine performance.</li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Bytmates -->
+      <div class="timeline">
+        <div class="timeline-entry">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h4>Intern</h4>
+            <h6>Bytmates — India</h6>
+            <p>May 2014 – Mar 2015</p>
+            <ul>
+              <li>Worked on digital watermarking for secure content distribution.</li>
+              <li>Designed and implemented data governance processes.</li>
+              <li>Handled low-level diagnostics and reusable backend code.</li>
+              <li>Participated in user-facing design integrated with server logic.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="card-section">
+      <h2>Education</h2>
+      <p><strong>Bachelor of Technology in Computer Science</strong><br>LBS Institute of Technology for Women, Trivandrum, Kerala (2010–2014)</p>
+      <p><strong>Higher Secondary</strong><br>Cotton Hill GHSS, Trivandrum, Kerala (2008–2010)</p>
+    </section>
+
+    <section id="skills" class="card-section">
+    <h2>Skills</h2>
+    <ul>
+        <li>HTML5, CSS3, Bootstrap, and responsive design best practices</li>
+        <li>JavaScript, AJAX for interactive web applications</li>
+        <li>Cloud platforms: Azure, AWS, Google Cloud Platform (GCP)</li>
+        <li>Strong understanding of mobile-first and responsive design approaches</li>
+        <li>Programming languages: Python, Go (Golang), Node.js, C, C++, Java</li>
+        <li>Frameworks: Django for backend web development</li>
+        <li>REST API development and integration</li>
+        <li>Shell scripting for automation and system operations</li>
+        <li>Ansible for configuration management and IT automation</li>
+        <li>Version control tools: Git, SVN</li>
+        <li>Databases: MongoDB, NoSQL, SQLite3, MySQL, Parquet</li>
+        <li>Caching and messaging: Redis, ZeroMQ</li>
+        <li>Basic knowledge of AI and machine learning principles</li>
+        <li>Docker containerization and microservices development</li>
+        <li>Networking fundamentals: DHCP, DNS, IPAM, port scanning, vulnerability scanning</li>
+        <li>Cybersecurity: Familiar with internet protocols and core security principles</li>
+        <li>Linux systems administration: Ubuntu, networking equipment (routers), hardware support</li>
+        <li>System administration: troubleshooting, diagnostics, and issue resolution</li>
+        <li>Business tools: Microsoft Office, reporting, vendor management, invoice handling</li>
+        <li>Data analysis and administrative support</li>
+        <li>Team leadership, mentoring, and collaborative project execution</li>
+        <li>Strong critical thinking, innovation, deadline management, and multitasking</li>
+        <li>Highly organized, enthusiastic, and confident with excellent coordination skills</li>
+    </ul>
+    </section>
+
+
+    <section id="projects" class="card-section">
+      <h2>Projects</h2>
+      <ul>
+        <li>Student Management System (Mini Project)</li>
+        <li>Human-Computer Interfaces in Robotic Surgery (Seminar)</li>
+        <li>Robust Watermarking of Encrypted JPEG2000 Images</li>
+        <li>Personal Portfolio Website & E-Commerce Cart</li>
+        <li>Open-source contributions on GitHub</li>
+      </ul>
+    </section>
+
+    <!-- <section id="certifications" class="card-section">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Demisto Engineer – Palo Alto Networks</li>
+        <li>Cortex XSOAR Analyst – Palo Alto Networks</li>
+        <li>ROBOAVR Workshop – Microsoft Robotics Dev Studio</li>
+        <li>Hardware & Networking – LBS Institute of Technology</li>
+        <li>Exceptional Performance Award – Linkshadow</li>
+      </ul>
+    </section> -->
+    <section id="certifications" class="card-section">
+      <h2>Certifications</h2>
+      <div class="scroll-gallery-wrapper">
+        <div class="scroll-arrow left" onclick="scrollGallery('cert-gallery', -1)">&#10094;</div>
+        <div class="scroll-arrow right" onclick="scrollGallery('cert-gallery', 1)">&#10095;</div>
+        <div class="scroll-gallery" id="cert-gallery">
+          <img src="images/cert_demisto.jpg" alt="Demisto Certification">
+          <img src="images/cert_xsoar.jpg" alt="XSOAR Certification">
+          <img src="images/cert_roboavr.jpg" alt="ROBOAVR Certificate">
+          <img src="images/cert_hardware.jpg" alt="Hardware Certificate">
+          <img src="images/cert_award.jpg" alt="Award Certificate">
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="card-section">
+      <h2>Team Events</h2>
+      <ul>
+        <li>AI Hackathon 2023 – Dubai</li>
+        <li>Team Outing – Desert Safari</li>
+        <li>Cybersecurity Summit – GITEX 2023</li>
+      </ul>
+    </section>
+
+    <section id="events" class="card-section">
+      <h2>Team Events</h2>
+      <div class="scroll-gallery-wrapper">
+        <div class="scroll-arrow left" onclick="scrollGallery('event-gallery', -1)">&#10094;</div>
+        <div class="scroll-arrow right" onclick="scrollGallery('event-gallery', 1)">&#10095;</div>
+        <div class="scroll-gallery" id="event-gallery">
+          <img src="images/event_hackathon.jpg" alt="AI Hackathon">
+          <img src="images/paint_ball.jpg" alt="Paint Ball">
+          <img src="images/event_gitex.jpg" alt="GITEX Summit">
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="card-section">
+      <h2>Contact</h2>
+      <p>If you’d like to get in touch, feel free to reach out via:</p>
+      <ul>
+        <li>Email: <a href="mailto:devika_aj@outlook.com">devika_aj@outlook.com</a></li>
+        <li>Phone: +31-686306039</li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/devika-arun-bbb9bb181/" target="_blank">linkedin.com/in/devika-arun</a></li>
+      </ul>
+    </section>
+    
+    <script>
+      function scrollGallery(id, direction) {
+        const el = document.getElementById(id);
+        const scrollAmount = 300;
+        el.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+      }
+    </script>
+  </div>
+</body>
+</html>
