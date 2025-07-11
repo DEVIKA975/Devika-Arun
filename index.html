@@ -1,96 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Devika Arun | Experience Timeline</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Devika Arun | Portfolio</title>
   <style>
+
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: linear-gradient(135deg, #f0f0f0 30%, #dce8ef);
-      display: flex;
-    }
-
-    .sidenav {
-      width: 250px;
-      background: linear-gradient(135deg, #343a40, #495057);
-      color: white;
-      padding: 20px;
-      height: 100vh;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-    }
-
-    .sidenav img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-      border: 2px solid #fff;
-    }
-
-    .sidenav h1 {
-      font-size: 20px;
-      margin: 10px 0 5px;
-      text-align: center;
-    }
-
-    .sidenav p {
-      font-size: 14px;
-      text-align: center;
-      line-height: 1.5;
-      margin-bottom: 10px;
-    }
-
-    .sidenav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 5px 0;
-      display: inline-block;
-      transition: 0.3s;
-    }
-
-    .sidenav a:hover {
-      color: #f5b301;
-    }
-
-    .sidenav .nav-links {
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .sidenav .btn {
-      display: inline-block;
-      background: #f5b301;
-      color: #000;
-      font-weight: bold;
-      padding: 10px 16px;
-      margin-top: 10px;
-      border-radius: 25px;
-      text-decoration: none;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .sidenav .btn:hover {
-      background: #ffc107;
-      color: #222;
-    }
-
-    .main-content {
-      flex: 1;
-      padding: 20px 40px 20px 300px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ffe69c, #fff8e1);
       color: #333;
     }
+    .nav {
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px 40px;
+    }
+    .nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      color: #000;
+      transition: color 0.3s ease;
+    }
+    .nav a:hover {
+      color: #f5b301;
+    }
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 80px;
+      background-image: url('images/wallpaper.jpg'); /* Replace with actual image path */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 0 0 40px 40px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      animation: fadeIn 1s ease-out;
+      color: #fff; /* Ensures text remains readable */
+      position: relative;
+    }
 
-    .timeline {
+    /* Optional: add dark overlay for better text contrast */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5); /* Adjustable darkness */
+      border-radius: 0 0 40px 40px;
+      z-index: 0;
+    }
+
+    .hero * {
+      position: relative;
+      z-index: 1;
+    }
+
+
+    .hero-text {
+      flex: 1;
+      padding-right: 40px;
+      animation: slideInLeft 1s ease-out;
+    }
+    .hero-text h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    .hero-text p {
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 600px;
+    }
+    .hero-text .tagline {
+      color: #d4a600;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+    .hero-buttons {
+      margin-top: 25px;
+    }
+    .hero-buttons a {
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 25px;
+      font-weight: 600;
+      margin-right: 15px;
+      transition: all 0.3s ease-in-out;
+      display: inline-block;
+    }
+    .btn-primary {
+      background-color: #f5b301;
+      color: #000;
+    }
+    .btn-primary:hover {
+      background-color: #d49e00;
+    }
+    .btn-outline {
+      border: 2px solid #f5b301;
+      color: #000;
+    }
+    .btn-outline:hover {
+      background-color: #f5b301;
+    }
+    .hero-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      animation: slideInRight 1s ease-out;
+    }
+    .hero-image img {
+      width: 300px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    section {
+      padding: 40px 80px;
+      animation: fadeInUp 1s ease;
+    }
+
+        .timeline {
       position: relative;
       margin-left: 30px;
       border-left: 3px solid #888;
@@ -119,7 +153,6 @@
 
     .timeline-content {
       padding-left: 10px;
-      background: rgba(255, 255, 255, 0.9);
       border-radius: 8px;
       padding: 15px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -141,71 +174,81 @@
       margin-bottom: 0.5rem;
     }
 
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
     ul {
       padding-left: 20px;
+      line-height: 1.8;
     }
-
-    li {
-      margin-bottom: 5px;
-    }
-
-    section {
-      margin-top: 60px;
-    }
-
-    h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 10px;
-    }
-
-    .card-section {
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 8px;
+    footer {
+      text-align: center;
       padding: 20px;
-      margin-bottom: 40px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      font-size: 14px;
+      background: #f9f9f9;
+      margin-top: 50px;
     }
-    
-    .scroll-gallery {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        gap: 20px;
-        padding-bottom: 10px;
+    .gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 20px 0;
     }
-
-    .scroll-gallery img {
-        height: 180px;
-        flex: 0 0 auto;
-        border-radius: 8px;
-        scroll-snap-align: start;
+    .gallery img {
+      height: 180px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-
+    @keyframes fadeIn {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes slideInLeft {
+      from { transform: translateX(-100px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slideInRight {
+      from { transform: translateX(100px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
   </style>
 </head>
 <body>
-  <div class="sidenav">
-    <img src="images/prof3.jpeg" alt="Devika Arun">
-    <h1>Devika Arun</h1>
-    <p>Senior Software Developer<br>
-       Veldhoven, Netherlands<br>
-       <a href="mailto:devika_aj@outlook.com">devika_aj@outlook.com</a><br>
-       +31-686306039</p>
-    <div class="nav-links">
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#events">Team Events</a>
-      <a href="#contact">Contact</a>
-    </div>  
-    <a class="btn" href="https://www.linkedin.com/in/devika-arun-bbb9bb181/" target="_blank">LinkedIn</a>
-    <a class="btn" href="images/DevikaArunCV.pdf" download>Download CV</a>
-    
+  <div class="nav">
+    <a href="#experience">About me</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
   </div>
 
-  <div class="main-content">
+  <section class="hero">
+    <div class="hero-text">
+      <div class="tagline">SOFTWARE ENGINEER / FULL-STACK DEVELOPER</div>
+      <h1>Hello, I’m Devika Arun</h1>
+      <p>Experienced software engineer passionate about building scalable systems, automating workflows, and solving real-world problems using secure and efficient backend technologies.</p>
+      <div class="hero-buttons">
+        <a href="images/DevikaArunCV.pdf" class="btn-primary" download>Download Resume</a>
+        <a href="https://www.linkedin.com/in/devika-arun-bbb9bb181/" target="_blank" class="btn-outline">LinkedIn</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="images/prof3.jpeg" alt="Devika Arun">
+    </div>
+  </section>
+
+    <section id="education" class="card-section">
+      <h2>Education</h2>
+      <p><strong>Bachelor of Technology in Computer Science</strong><br>LBS Institute of Technology for Women, Trivandrum, Kerala (2010–2014)</p>
+      <p><strong>Higher Secondary</strong><br>Cotton Hill GHSS, Trivandrum, Kerala (2008–2010)</p>
+    </section>
+
     <section id="experience">
       <h2>Professional Experience</h2>
 
@@ -305,13 +348,7 @@
       </div>
     </section>
 
-    <section id="education" class="card-section">
-      <h2>Education</h2>
-      <p><strong>Bachelor of Technology in Computer Science</strong><br>LBS Institute of Technology for Women, Trivandrum, Kerala (2010–2014)</p>
-      <p><strong>Higher Secondary</strong><br>Cotton Hill GHSS, Trivandrum, Kerala (2008–2010)</p>
-    </section>
-
-    <section id="skills" class="card-section">
+  <section id="skills">
     <h2>Skills</h2>
     <ul>
         <li>HTML5, CSS3, Bootstrap, and responsive design best practices</li>
@@ -338,67 +375,63 @@
         <li>Strong critical thinking, innovation, deadline management, and multitasking</li>
         <li>Highly organized, enthusiastic, and confident with excellent coordination skills</li>
     </ul>
-    </section>
+  </section>
 
-
-    <section id="projects" class="card-section">
-      <h2>Projects</h2>
-      <ul>
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
         <li>Student Management System (Mini Project)</li>
         <li>Human-Computer Interfaces in Robotic Surgery (Seminar)</li>
         <li>Robust Watermarking of Encrypted JPEG2000 Images</li>
         <li>Personal Portfolio Website & E-Commerce Cart</li>
         <li>Open-source contributions on GitHub</li>
-      </ul>
-    </section>
+    </ul>
+  </section>
 
-    <section id="certifications" class="card-section">
-      <h2>Certifications</h2>
-      <ul>
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
         <li>Demisto Engineer – Palo Alto Networks</li>
         <li>Cortex XSOAR Analyst – Palo Alto Networks</li>
         <li>ROBOAVR Workshop – Microsoft Robotics Dev Studio</li>
         <li>Hardware & Networking – LBS Institute of Technology</li>
         <li>Exceptional Performance Award – Linkshadow</li>
-      </ul>
-    </section>
-    <!-- <section id="certifications" class="card-section">
-    <h2>Certifications</h2>
-    <div class="scroll-gallery">
-        <img src="images/cert_demisto.jpg" alt="Demisto Certification">
-        <img src="images/cert_xsoar.jpg" alt="XSOAR Certification">
-        <img src="images/cert_roboavr.jpg" alt="ROBOAVR Certificate">
-        <img src="images/cert_hardware.jpg" alt="Hardware Certificate">
-        <img src="images/cert_award.jpg" alt="Exceptional Performance Award">
-    </div>
-    </section> -->
-
-    <section id="events" class="card-section">
-      <h2>Team Events</h2>
-      <ul>
-        <li>AI Hackathon 2023 – Dubai</li>
-        <li>Team Outing – Desert Safari</li>
-        <li>Cybersecurity Summit – GITEX 2023</li>
-      </ul>
-    </section>
+    </ul>
+  </section>
 
     <!-- <section id="events" class="card-section">
-    <h2>Team Events</h2>
-    <div class="scroll-gallery">
-        <img src="images/event_hackathon.jpg" alt="Iftar party">
-        <img src="images/event_safari.jpg" alt="Paintball">
-        <img src="images/event_gitex.jpg" alt="GITEX Summit">
-    </div>
-    </section> -->
-    <section id="contact" class="card-section">
-      <h2>Contact</h2>
-      <p>If you’d like to get in touch, feel free to reach out via:</p>
+      <h2>Team Events</h2>
       <ul>
-        <li>Email: <a href="mailto:devika_aj@outlook.com">devika_aj@outlook.com</a></li>
-        <li>Phone: +31-686306039</li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/devika-arun-bbb9bb181/" target="_blank">linkedin.com/in/devika-arun</a></li>
+        <li>Team Activity – PaintBall</li>
+        <li>Team Outing – Boat Trip</li>
+        <li>Cybersecurity Summit – GITEX 2023</li>
       </ul>
-    </section>
-  </div>
+    </section> -->
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="images/cert_demisto.jpg" alt="Demisto Engineer">
+      <img src="images/cert_xsoar.jpg" alt="Cortex XSOAR Analyst">
+      <img src="images/cert_roboavr.jpg" alt="ROBOAVR Workshop">
+      <img src="images/cert_hardware.jpg" alt="Hardware & Networking">
+      <img src="images/cert_award.jpg" alt="Performance Award">
+      <img src="images/team_event1.jpg" alt="Team Event 1">
+      <img src="images/team_event2.jpg" alt="Team Event 2">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <ul>
+      <li>Email: <a href="mailto:devika_aj@outlook.com">devika_aj@outlook.com</a></li>
+      <li>Phone: +31-686306039</li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/devika-arun-bbb9bb181/">linkedin.com/in/devika-arun</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2025 Devika Arun. All rights reserved.
+  </footer>
 </body>
 </html>
